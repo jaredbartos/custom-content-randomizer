@@ -23,7 +23,8 @@ const addContent = (e) => {
     'd-flex',
     'justify-content-between',
     'align-items-center',
-    'fs-5'
+    'fs-5',
+    'mb-2'
   );
   contentEl.textContent = content;
   contentListEl.appendChild(contentEl);
