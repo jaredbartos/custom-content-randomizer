@@ -70,6 +70,6 @@ contentInputEl.onfocus = () => {
   contentInputEl.placeholder = '';
 };
 contentInputEl.onblur = () => {
-  contentInputEl.placeholder = 'Avoid making a decision';
+  contentInputEl.placeholder = 'Enter text here';
 };
 randomizeBtn.onclick = randomizeContent;
