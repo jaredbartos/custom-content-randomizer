@@ -13,6 +13,10 @@ const addContent = (e) => {
     contentListContainerEl.style.display = 'block';
   }
 
+  if (randomizeBtn.style.display === 'none') {
+    randomizeBtn.style.display = 'block';
+  }
+
   randomizeBtn.disabled = false;
 
   // Get the content from the input field
@@ -24,7 +28,7 @@ const addContent = (e) => {
     'justify-content-between',
     'align-items-center',
     'fs-5',
-    'mb-2'
+    'mb-2',
   );
   contentEl.textContent = content;
   contentListEl.appendChild(contentEl);
@@ -38,6 +42,7 @@ const addContent = (e) => {
     if (contentListEl.children.length === 0) {
       contentListContainerEl.style.display = 'none';
       randomizeBtn.disabled = true;
+      randomizeBtn.style.display = 'none';
     }
   };
 

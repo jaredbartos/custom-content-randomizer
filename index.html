@@ -10,10 +10,23 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" type="text/css" />
   </head>
   <body>
-    <h1 class="text-center my-5">Custom Content Randomizer</h1>
+    <h1 class="text-center mt-5">Randomizer</h1>
+
+    <div class="row">
+      <p class="col-10 mx-auto mb-5 mt-2 text-center">
+        Add your choices in the text box below and click RANDOMIZE to let me
+        make a decision for you!
+      </p>
+    </div>
 
     <form>
       <div class="container">
@@ -22,13 +35,13 @@
             type="text"
             id="contentInput"
             placeholder="Enter text here"
-            class="col-10 mx-auto fs-5 rounded-4 p-3 text-center"
+            class="col-10 mx-auto fs-5 rounded-5 p-3 text-center"
           />
         </div>
-        <div class="row">
+        <div class="d-flex justify-content-center">
           <button
             id="addContentBtn"
-            class="btn btn-primary col-4 mx-auto mt-3"
+            class="btn btn-primary rounded-3 mx-auto mt-3 fs-4"
             disabled
           >
             Add<i class="fa-solid fa-plus ms-2"></i>
@@ -40,22 +53,21 @@
           class="card col-10 mt-5 mx-auto"
           style="display: none"
         >
-          <div class="card-header">Your Pool of Indecisiveness</div>
+          <div class="card-header text-center">Your Pool of Indecisiveness</div>
           <ul id="contentList" class="list-group-flush pe-3 pt-2"></ul>
         </div>
 
-        <div class="row">
           <button
             id="randomizeBtn"
             type="button"
-            class="btn btn-primary mx-auto mt-5 col-6 fs-4"
+            class="btn btn-primary mx-auto rounded-3 mt-5 fs-4"
             data-bs-toggle="modal"
             data-bs-target="#randomSelectionModal"
             disabled
+            style="display: none"
           >
             Randomize<i class="fa-solid fa-dice ms-2"></i>
           </button>
-        </div>
       </div>
     </form>
 
